@@ -7,5 +7,9 @@ const commands = [
 
 const rest = new REST().setToken(TOKEN);
 
-const response = await rest.put(Routes.applicationCommands(CLIENT_ID), { body: commands });
-console.log(response);
+async function deployCommands() {
+    const response = await rest.put(Routes.applicationCommands(CLIENT_ID), { body: commands });
+    console.log(response);
+}
+
+deployCommands();
