@@ -72,13 +72,35 @@ export const QUESTIONS: BaseMessageOptions[] = [
         ]
     },
     {
+        content: "Which condiment is your favorite?",
+        components: [
+            new ActionRowBuilder<ButtonBuilder>().addComponents([
+                new ButtonBuilder().setCustomId(ButtonIds.Q7A1).setLabel("Ketchup").setStyle(ButtonStyle.Primary),
+                new ButtonBuilder().setCustomId(ButtonIds.Q7A2).setLabel("Mustard").setStyle(ButtonStyle.Primary),
+                new ButtonBuilder().setCustomId(ButtonIds.Q7A3).setLabel("Mayo").setStyle(ButtonStyle.Primary),
+                new ButtonBuilder().setCustomId(ButtonIds.Q7A4).setLabel("Ranch").setStyle(ButtonStyle.Primary)
+            ])
+        ]
+    },
+    {
+        content: "What is your favorite part of an egg to eat?",
+        components: [
+            new ActionRowBuilder<ButtonBuilder>().addComponents([
+                new ButtonBuilder().setCustomId(ButtonIds.Q8A1).setLabel("White").setStyle(ButtonStyle.Primary),
+                new ButtonBuilder().setCustomId(ButtonIds.Q8A2).setLabel("Yolk").setStyle(ButtonStyle.Primary),
+                new ButtonBuilder().setCustomId(ButtonIds.Q8A3).setLabel("Shell").setStyle(ButtonStyle.Primary),
+                new ButtonBuilder().setCustomId(ButtonIds.Q8A4).setLabel("Carton").setStyle(ButtonStyle.Primary)
+            ])
+        ]
+    },
+    {
         content: "Pick One.",
         components: [
             new ActionRowBuilder<ButtonBuilder>().addComponents([
-                new ButtonBuilder().setCustomId(ButtonIds.Q7A1).setLabel("Egg").setStyle(ButtonStyle.Primary),
-                new ButtonBuilder().setCustomId(ButtonIds.Q7A2).setLabel("Egg").setStyle(ButtonStyle.Primary),
-                new ButtonBuilder().setCustomId(ButtonIds.Q7A3).setLabel("Egg").setStyle(ButtonStyle.Primary),
-                new ButtonBuilder().setCustomId(ButtonIds.Q7A4).setLabel("Egg").setStyle(ButtonStyle.Primary)
+                new ButtonBuilder().setCustomId(ButtonIds.Q9A1).setLabel("Egg").setStyle(ButtonStyle.Primary),
+                new ButtonBuilder().setCustomId(ButtonIds.Q9A2).setLabel("Egg").setStyle(ButtonStyle.Primary),
+                new ButtonBuilder().setCustomId(ButtonIds.Q9A3).setLabel("Egg").setStyle(ButtonStyle.Primary),
+                new ButtonBuilder().setCustomId(ButtonIds.Q9A4).setLabel("Egg").setStyle(ButtonStyle.Primary)
             ])
         ]
     }

@@ -26,5 +26,13 @@ export enum ButtonIds {
     Q7A1 = "Q7A1",
     Q7A2 = "Q7A2",
     Q7A3 = "Q7A3",
-    Q7A4 = "Q7A4"
+    Q7A4 = "Q7A4",
+    Q8A1 = "Q8A1",
+    Q8A2 = "Q8A2",
+    Q8A3 = "Q8A3",
+    Q8A4 = "Q8A4",
+    Q9A1 = "Q9A1",
+    Q9A2 = "Q9A2",
+    Q9A3 = "Q9A3",
+    Q9A4 = "Q9A4"
 }

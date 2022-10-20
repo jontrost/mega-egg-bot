@@ -29,5 +29,13 @@ export const ANSWERS = new Map([
     [ButtonIds.Q7A1, EggTypes.Scrambled],
     [ButtonIds.Q7A2, EggTypes.Fried],
     [ButtonIds.Q7A3, EggTypes.Deviled],
-    [ButtonIds.Q7A4, EggTypes.Dinosaur]
+    [ButtonIds.Q7A4, EggTypes.Dinosaur],
+    [ButtonIds.Q8A1, EggTypes.Scrambled],
+    [ButtonIds.Q8A2, EggTypes.Fried],
+    [ButtonIds.Q8A3, EggTypes.Deviled],
+    [ButtonIds.Q8A4, EggTypes.Dinosaur],
+    [ButtonIds.Q9A1, EggTypes.Scrambled],
+    [ButtonIds.Q9A2, EggTypes.Fried],
+    [ButtonIds.Q9A3, EggTypes.Deviled],
+    [ButtonIds.Q9A4, EggTypes.Dinosaur]
 ]);
