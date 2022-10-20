@@ -61,7 +61,7 @@ async function handleButton(interaction: ButtonInteraction) {
     }
 
     if (interaction.user.id === quizData.quizOwner) {
-        const updatedQuizData = processQuestionAnswer(interaction, quizData);
+        const updatedQuizData = await processQuestionAnswer(interaction, quizData);
         if (updatedQuizData.questionsAnswered < QUESTIONS.length) {
             interaction.update(QUESTIONS[updatedQuizData.questionsAnswered]);
         } else {
@@ -70,7 +70,7 @@ async function handleButton(interaction: ButtonInteraction) {
     }
 }
 
-function determineEggType(interaction: ButtonInteraction, quizData: QuizData) {
+async function determineEggType(interaction: ButtonInteraction, quizData: QuizData) {
     if (interaction.user.username === "MugiwaraNoNelli") {
         interaction.update({
             content: null,
@@ -125,11 +125,11 @@ function determineEggType(interaction: ButtonInteraction, quizData: QuizData) {
     if (interaction.message.interaction?.id === undefined) {
         handleError(interaction);
     } else {
-        keyv.delete(interaction.message.interaction.id);
+        await keyv.delete(interaction.message.interaction.id);
     }
 }
 
-function processQuestionAnswer(interaction: ButtonInteraction, quizData: QuizData) {
+async function processQuestionAnswer(interaction: ButtonInteraction, quizData: QuizData) {
     quizData.questionsAnswered += 1;
     const eggType = ANSWERS.get(interaction.customId as ButtonIds);
     switch (eggType) {
@@ -151,7 +151,7 @@ function processQuestionAnswer(interaction: ButtonInteraction, quizData: QuizDat
     if (interaction.message.interaction?.id === undefined) {
         handleError(interaction);
     } else {
-        keyv.set(interaction.message.interaction.id, quizData);
+        await keyv.set(interaction.message.interaction.id, quizData);
     }
     return quizData;
 }
